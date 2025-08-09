@@ -14,22 +14,12 @@ It’s intended for developers who want to quickly inspect or document Flows wit
 Example:
 
 ```bash
-python -m flow_transpiler_cli ~/Downloads/MyFlow.flow-meta.xml
+python src/flow_transpiler_service.py ~/Downloads/MyFlow.flow-meta.xml
 ```
 
 This will print the generated pseudocode to standard output.
 
-## Error Handling
 
-If an error occurs during transpilation (e.g., file not found, invalid XML),
-an error message will be printed to standard error and the process will exit with status code `1`.
-
-## Notes
-
-* The script uses `argparse` for CLI argument parsing.
-* `FileSystemStorage` handles reading the Flow XML file.
-* `FlowTranspilerService` contains the logic to parse and convert the Flow into pseudocode.
-* The tool is asynchronous (`async/await`), but can be run directly as shown above.
 
 
 
